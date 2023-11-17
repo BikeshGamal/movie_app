@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/description.dart';
 import '../utils/text.dart';
+import '../utils/text_.dart';
 class TrendingMovies extends StatelessWidget {
   final List trending;
   const TrendingMovies({super.key, required this.trending});
@@ -20,7 +21,7 @@ class TrendingMovies extends StatelessWidget {
             height: 10,
           ),
           Container(
-            height: 270,
+            height: 290,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: trending.length,
@@ -57,7 +58,7 @@ class TrendingMovies extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            child: ModifiedText(
+                            child: ModifiedText_(
                               text: trending[index]['title'],
                               color: Colors.white,
                               size: 16,

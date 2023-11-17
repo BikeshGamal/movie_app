@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../description.dart';
 import '../utils/text.dart';
+import '../utils/text_.dart';
 class TopRated extends StatelessWidget {
   final List toprated;
   const TopRated({super.key, required this.toprated});@override
@@ -13,7 +14,7 @@ class TopRated extends StatelessWidget {
           ModifiedText(text:"Top Rated Movies", color: Colors.pink, size: 26,),
           SizedBox(height: 10,),
           Container(
-            height: 270,
+            height: 290,
             child: ListView.builder(scrollDirection: Axis.horizontal,itemCount: toprated.length,itemBuilder: (context,index){
               return InkWell(
                 onTap: (){
@@ -48,7 +49,7 @@ class TopRated extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        child: ModifiedText(
+                        child: ModifiedText_(
                           text: toprated[index]['title'], color: Colors.white, size: 16,
                         ),
                       )

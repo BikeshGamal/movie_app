@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../description.dart';
 import '../utils/text.dart';
+import '../utils/text_.dart';
 class TV extends StatelessWidget {
   final List tv;
   const TV({super.key, required this.tv});@override
@@ -13,7 +14,7 @@ class TV extends StatelessWidget {
           ModifiedText(text:"Popular TV Shows", color: Colors.pink, size: 26,),
           SizedBox(height: 10,),
           Container(
-            height: 207,
+            height: 230,
             child: ListView.builder(scrollDirection: Axis.horizontal,itemCount: tv.length,itemBuilder: (context,index){
               return InkWell(
                 onTap: (){
@@ -50,7 +51,7 @@ class TV extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        child: ModifiedText(
+                        child: ModifiedText_(
                           text: tv[index]['original_name'], color: Colors.white, size: 16,
                         ),
                       )
